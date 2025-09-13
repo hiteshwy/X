@@ -1,4 +1,3 @@
-
 FROM ubuntu:22.04
 
 RUN apt-get update && \
@@ -11,6 +10,6 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-COPY fixed_full_correct_darknode_bot.py darknode_bot.py
+COPY darknode_bot.py .
 
 CMD ["python3", "darknode_bot.py"]
